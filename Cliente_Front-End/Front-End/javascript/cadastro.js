@@ -1,6 +1,13 @@
 const btn = document.querySelector('#button');
 const inputs = document.querySelectorAll('.input');
 
+const userNome = document.querySelector('#nome');
+const userPassword = document.querySelector('#password');
+const userCep = document.querySelector('#cep');
+const userCpf = document.querySelector('#cpf');
+const userPergunta = document.querySelector('#pergunta');
+const userResposta = document.querySelector('#resposta');
+
 btn.addEventListener("click", () => cadastro());
 
 async function cadastro() {
@@ -12,9 +19,9 @@ async function cadastro() {
 	const cep = userCep.value;
 	const userCpf = document.querySelector('#cpf');
 	const cpf = userCpf.value;
-    const userPergunta = document.querySelector('#pergunta');
+  const userPergunta = document.querySelector('#pergunta');
 	const pergunta = userPergunta.value;
-    const userResposta = document.querySelector('#resposta');
+  const userResposta = document.querySelector('#resposta');
 	const resposta = userResposta.value;
 	
 	const data = { 
@@ -26,7 +33,7 @@ async function cadastro() {
       "resposta": resposta,
     };
 	
-	fetch("http://127.0.0.1:8000/api/v1/usuarios", {
+	fetch("https://servidor.andrereis3498.repl.co/api/usuarios", {
       method: "POST",
       headers: {
       "Content-Type": "application/json",
@@ -41,7 +48,7 @@ async function cadastro() {
         console.error("Error:", error);
     });
 	
-    nome.value = "";
+  nome.value = "";
 	senha.value = "";
 	cep.value = "";
 	cpf.value = "";

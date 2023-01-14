@@ -1,0 +1,57 @@
+.main__button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    background-color: black);
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 25px;
+    height: 35px;
+    width: 100%;
+}
+
+.input {
+    position: relative;
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.input__element {
+    background-color: transparent;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    padding: 10px 15px 10px 35px;
+    font-size: 1.2rem;
+    height: 35px;
+    width: 100%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #000000;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main__inputs{
+    width: 400px;
+    margin-inline: 500px;
+}
+
+.input label{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.main__inputs h1 {
+    text-align: : center;
+}

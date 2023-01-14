@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="css/postar.css">
+		<title>Postar Produto</title>
+	</head>
+	<body>
+		<div class="main__inputs">
+			<h1>Postar Produto:</h1>
+			<div class="input" id="inputVendedor">
+				<label>Vendedor: </label>
+				<input type="name" class="input__element" id="vendedor"/>
+			</div>
+			<div class="input" id="inputCategoria">
+				<label>Categoria: </label>
+				<select class ="input__element" id="categoria">
+				  <option value="">--Escolha a Categoria--</option>
+				  <option value="quarto">Quarto</option>
+				  <option value="cozinha">Cozinha</option>
+				  <option value="banheiro">Banheiro</option>
+				  <option value="sala">Sala</option>
+				</select>
+			</div>
+			<div class="input" id="inputNome">
+				<label>Nome do Produto: </label>
+				<input type="name" class="input__element" id="nome"/>
+			</div>
+			<div class="input" id="inputPreco">
+				<label>Preço(só tres digitos)R$: </label>
+				<input type="name" class="input__element" id="preco"/>
+			</div>
+			<div class="input" id="inputMarca">
+				<label>Marca: </label>
+				<input type="name" class="input__element" id="marca"/>
+			</div>
+			<div class="input" id="inputModelo">
+				<label>Modelo: </label>
+				<input type="name" class="input__element" id="modelo"/>
+			</div>
+				<div class="input" id="inputDescricao">
+				<label>Descrição: </label>
+				<input type="name" class="input__element" id="descricao"/>
+			</div>
+			<button type="submit" class="main__button" id="button">Postar</button>
+		</div>
+		
+		<a href="Home.html"><h2>Home</h2></a>
+		<script src="javascript/postar.js"></script>
+	</body>
+
+</html>
