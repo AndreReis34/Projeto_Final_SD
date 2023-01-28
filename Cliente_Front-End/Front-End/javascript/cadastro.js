@@ -1,13 +1,6 @@
 const btn = document.querySelector('#button');
 const inputs = document.querySelectorAll('.input');
 
-const userNome = document.querySelector('#nome');
-const userPassword = document.querySelector('#password');
-const userCep = document.querySelector('#cep');
-const userCpf = document.querySelector('#cpf');
-const userPergunta = document.querySelector('#pergunta');
-const userResposta = document.querySelector('#resposta');
-
 btn.addEventListener("click", () => cadastro());
 
 async function cadastro() {
@@ -15,6 +8,8 @@ async function cadastro() {
 	const nome = userNome.value;
 	const userPassword = document.querySelector('#password');
 	const senha = userPassword.value;
+  const userEmail = document.querySelector('#email');
+  const email = userEmail.value;
 	const userCep = document.querySelector('#cep');
 	const cep = userCep.value;
 	const userCpf = document.querySelector('#cpf');
@@ -23,21 +18,23 @@ async function cadastro() {
 	const pergunta = userPergunta.value;
   const userResposta = document.querySelector('#resposta');
 	const resposta = userResposta.value;
-	
-	const data = { 
+
+	const data = {
       "nome": nome,
       "senha": senha,
+      "email": email,
       "cep": cep,
       "cpf": cpf,
       "pergunta": pergunta,
       "resposta": resposta,
     };
 	
-	fetch("https://servidor.andrereis3498.repl.co/api/usuarios", {
+	fetch("https://servidor.andrereis3498.repl.co/api/usuario", {
       method: "POST",
-      headers: {
-      "Content-Type": "application/json",
-    },
+      headers:({
+        "Authorization": `Basic YWRtaW46YWRtaW4=`,//`Basic admin:admin`,
+        "Content-Type": "application/json",
+    }),
       body: JSON.stringify(data),
     })
       .then((response) => response.json())

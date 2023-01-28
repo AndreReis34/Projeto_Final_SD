@@ -4,11 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" href="css/cadastro.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js"></script>
 		<title>Cadastro</title>
 	</head>
 	<body>
+
 		<div class="main__inputs">
-			<h1>Cadastro</h1>
+			<h1>Cadastro</h1><!--inicio dos inputs-->
 			<div class="input" id="inputName">
 				<label>Nome: </label>
 				<input type="name" class="input__element" id="nome"/>
@@ -17,6 +20,10 @@
 				<label>Senha: </label>
 				<input type="password" class="input__element" id="password"/>
 			</div>
+			<div class="input" id="inputEmail">
+				<label>Email: </label>
+				<input type="email" class="input__element" id="email"/>
+			</div>			
 			<div class="input" id="inputCep">
 				<label>Cep(só 9 digitos): </label>
 				<input type="name" class="input__element" id="cep"/>
@@ -34,9 +41,15 @@
 				<input type="name" class="input__element" id="resposta"/>
 			</div>
 			<button type="submit" class="main__button" id="button">Login</button>
-		</div>
-		
-		<a href="Home.html"><h2>Pagina Inicial</h2></a>
+		</div><!--main_inputs-->
+
+		<!--Autocomplete de cep e cpf-->		
+		<script>
+			setTimeout(function(){
+			  $("#cpf").inputmask("999.999.999-99");
+			  $("#cep").inputmask("99999-999");
+			});
+		</script>
 		<script src="javascript/cadastro.js"></script>
 	</body>
 

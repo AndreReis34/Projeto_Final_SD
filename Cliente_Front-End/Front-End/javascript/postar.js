@@ -1,14 +1,6 @@
 const btn = document.querySelector('#button');
 const inputs = document.querySelectorAll('.input');
 
-const postVendedor = document.querySelector('#vendedor');
-const postCategoria = document.querySelector('#categoria');
-const postNome = document.querySelector('#nome');
-const postPreco = document.querySelector('#preco');
-const postMarca = document.querySelector('#marca');
-const postModelo = document.querySelector('#modelo');
-const postDescricao = document.querySelector('#descricao');
-
 btn.addEventListener("click", () => postar());
 
 async function postar() {
@@ -37,9 +29,10 @@ async function postar() {
       "descricao": descricao,
     };
 	
-	fetch("https://servidor.andrereis3498.repl.co/api/produtos", {
+	fetch("https://servidor.andrereis3498.repl.co/api/produto", {
       method: "POST",
       headers: {
+      //"Authorization": `Basic YWRtaW46YWRtaW4=`,
       "Content-Type": "application/json",
     },
       body: JSON.stringify(data),
@@ -61,4 +54,6 @@ async function postar() {
   descricao.value = ""
 	alert("Produto postado com sucesso");
 }
+
+
 
