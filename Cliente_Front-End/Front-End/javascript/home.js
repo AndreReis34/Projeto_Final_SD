@@ -7,7 +7,8 @@ async function requisicao() {
       },
       mode: "no-cors",
     };*/
-    const requestURL = "https://servidor.andrereis3498.repl.co/api/produto.json";
+    const requestURL = "http://127.0.0.1:8000/api/usuarios";
+    //const requestURL = "https://servidor.andrereis3498.repl.co/api/produtos.json";
     const request = new Request(requestURL);
 
     const response = await fetch(request);

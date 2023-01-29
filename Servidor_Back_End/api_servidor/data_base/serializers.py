@@ -7,6 +7,7 @@ class UsuarioSerializer(serializers.ModelSerializer):
         model = Usuario
         fields = [
             'nome',
+            'email',
             'senha',
             'cep',
             'cpf',
@@ -26,3 +27,5 @@ class ProdutoSerializer(serializers.ModelSerializer):
             'modelo',
             'descricao',
         ]
+
+            

@@ -29,7 +29,8 @@ async function postar() {
       "descricao": descricao,
     };
 	
-	fetch("https://servidor.andrereis3498.repl.co/api/produto", {
+	//fetch("https://servidor.andrereis3498.repl.co/api/produtos", {
+    fetch("http://127.0.0.1:8000/api/produtos", { 
       method: "POST",
       headers: {
       //"Authorization": `Basic YWRtaW46YWRtaW4=`,
