@@ -14,7 +14,7 @@ async function login() {
 	const cryptoSenha = md.digest().toHex();
 
 	const requestURL = "http://127.0.0.1:8000/api/usuarios";
-	//const requestURL = "https://servidor.andrereis3498.repl.co/api/usuarios.json";
+	//const requestURL = "https://servidor.andrereis3498.repl.co/api/usuarios";
     const request = new Request(requestURL);
 
     const response = await fetch(request);
@@ -22,7 +22,6 @@ async function login() {
 
 	console.log(list);
 	for(const user of list){
-		console.log(user.email)
 		if(user.nome == nome){
 			if(user.senha == cryptoSenha){
 				window.location.href = "Home.html";
